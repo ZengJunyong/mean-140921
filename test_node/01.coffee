@@ -1,0 +1,2 @@
+mean = require 'meanio'
+mean()
