@@ -28,6 +28,7 @@ exports.render = function(req, res) {
     } : {},
     modules: modules,
     isAdmin: isAdmin,
+    hello:'hello world',
     adminEnabled: isAdmin() && mean.moduleEnabled('mean-admin')
   });
 };
