@@ -5,7 +5,7 @@ angular.module('mean-factory-interceptor', [])
         function ($q, $location) {
             return {
                 'response': function (response) {
-                    console.log('httpInterceptor response');
+                    console.log('httpInterceptor response: ', response.status);
                     if (response.status === 401) {
                         $location.path('/auth/login');
                         return $q.reject(response);
@@ -14,7 +14,7 @@ angular.module('mean-factory-interceptor', [])
                 },
 
                 'responseError': function (rejection) {
-                    console.log('httpInterceptor responseError');
+                    console.log('httpInterceptor responseError: ', rejection.status);
                     if (rejection.status === 401) {
                         $location.url('/auth/login');
                         return $q.reject(rejection);
