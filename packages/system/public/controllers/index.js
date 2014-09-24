@@ -56,6 +56,11 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
                 // POST: /user/163
                 // This will PUT /user/163 with the object in the request payload
                 user.$save();
+
+//                user.$delete(); // DELETE /user/163
+//                user.$remove();   // DELETE /user/163
+//                user.$get();    // GET /user/163
+                user.$query();  // GET /user/163 but throw : Expected response to contain an array but got an object
             });
         };
     }
