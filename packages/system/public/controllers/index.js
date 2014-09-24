@@ -33,6 +33,8 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
                 // POST: /user/123/card/456?amount=9.99&charge=true {id:456, number:'1234', name:'J. Smith'}
             });
 
+            $scope.cards = cards;
+
             // we can create an instance as well
             var newCard = new CreditCard({number: '0123'});
             newCard.name = "Mike Smith";

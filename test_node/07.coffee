@@ -12,7 +12,7 @@ mongoose.connect 'mongodb://192.168.2.105/mean-dev', {}, (err)->
   user.provider = "local"
   user.roles = ["authenticated"]
   user.save (err, data, count) ->
-    console.log err, data, count
+    console.log {err, data, count}
     if err
       switch err.code
         when 11000, 11001

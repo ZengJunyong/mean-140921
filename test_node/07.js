@@ -25,7 +25,11 @@ mongoose.connect('mongodb://192.168.2.105/mean-dev', {}, function(err) {
   user.roles = ["authenticated"];
   return user.save(function(err, data, count) {
     var modelErrors, x;
-    console.log(err, data, count);
+    console.log({
+      err: err,
+      data: data,
+      count: count
+    });
     if (err) {
       switch (err.code) {
         case 11000:
