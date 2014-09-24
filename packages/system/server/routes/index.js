@@ -11,4 +11,7 @@ module.exports = function (System, app, auth, database) {
     app.route('/user/:usernameID/card')
         .get(index.get);
 
+    app.route('/user/:usernameID/card/:cardId')
+        .post(index.post);
+
 };

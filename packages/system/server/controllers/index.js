@@ -42,3 +42,10 @@ exports.get = function (req, res) {
         {id: 456, number: '1234', name: 'Smith'}
     ]);
 };
+
+exports.post = function (req, res) {
+    var params = req.params;
+    var query = req.query;
+    console.log(params, query);
+    res.json({id: 456, number: '1234', name: 'J. Smith'});
+};
