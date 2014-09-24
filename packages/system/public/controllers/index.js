@@ -32,6 +32,16 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
                 card.$charge({amount: 9.99});
                 // POST: /user/123/card/456?amount=9.99&charge=true {id:456, number:'1234', name:'J. Smith'}
             });
+
+            // we can create an instance as well
+            var newCard = new CreditCard({number: '0123'});
+            newCard.name = "Mike Smith";
+            newCard.$save();
+            // POST: /user/123/card {number:'0123', name:'Mike Smith'}
+            // server returns: {id:456, number:'1234', name: 'J. Smith'};
+            // expect(newCard.id).toEqual(456);
+            console.log(newCard.id);
+            $scope.newCard = newCard;
         };
     }
 ]);

@@ -9,7 +9,7 @@ module.exports = function (System, app, auth, database) {
 
     // don't use userId course userId is used as a intercept parameter in another place
     app.route('/user/:usernameID/card')
-        .get(index.get);
+        .get(index.get).post(index.post);
 
     app.route('/user/:usernameID/card/:cardId')
         .post(index.post);
