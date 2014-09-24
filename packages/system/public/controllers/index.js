@@ -45,5 +45,18 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
             console.log(newCard.id);
             $scope.newCard = newCard;
         };
+
+        $scope.testResource2 = function () {
+            var User = $resource('/user/:usernameID', {usernameID: '@id'});
+            User.get({usernameID: 123}, function (user) {
+                // GET: /user/123
+                // server returns: {id: 163, username: 'Yong'}
+                console.log(user);
+                user.abcd = true;
+                // POST: /user/163
+                // This will PUT /user/163 with the object in the request payload
+                user.$save();
+            });
+        };
     }
 ]);

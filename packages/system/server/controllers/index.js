@@ -33,19 +33,33 @@ exports.render = function (req, res) {
     });
 };
 
-
-exports.get = function (req, res) {
+function printRequestInfo(req) {
     var params = req.params;
     var query = req.query;
-    console.log(params, query);
+    var body = req.body;
+    console.log(params, query, body);
+
+}
+
+exports.get = function (req, res) {
+    printRequestInfo(req);
     res.json([
         {id: 456, number: '1234', name: 'Smith'}
     ]);
 };
 
 exports.post = function (req, res) {
-    var params = req.params;
-    var query = req.query;
-    console.log(params, query);
+    printRequestInfo(req);
     res.json({id: 456, number: '1234', name: 'J. Smith'});
+};
+
+exports.getUser = function (req, res) {
+    printRequestInfo(req);
+    console.log(req.body);
+    res.json({id: 163, username: 'Yong'});
+};
+
+exports.saveUser = function (req, res) {
+    printRequestInfo(req);
+    res.json(1);
 };
