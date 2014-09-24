@@ -1,10 +1,14 @@
 'use strict';
 
-module.exports = function(System, app, auth, database) {
+module.exports = function (System, app, auth, database) {
 
-  // Home route
-  var index = require('../controllers/index');
-  app.route('/')
-    .get(index.render);
+    // Home route
+    var index = require('../controllers/index');
+    app.route('/')
+        .get(index.render);
+
+    // don't use userId course userId is used as a intercept parameter in another place
+    app.route('/user/:usernameID/card')
+        .get(index.get);
 
 };
