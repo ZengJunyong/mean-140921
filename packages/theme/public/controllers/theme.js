@@ -3,6 +3,7 @@
 angular.module('mean.theme')
     .controller('ThemeController', ['$scope', 'Global', '$location', '$rootScope',
         function ($scope, Global, $location, $rootScope) {
+            console.log('ThemeController');
             $rootScope.$on('$stateChangeStart',
                 function (event, toState, toParams, fromState, fromParams) {
                     var toPath = toState.url.replace('/', '');
@@ -11,7 +12,7 @@ angular.module('mean.theme')
                         $scope.state = 'firstPage';
                     }
                 });
-// Original scaffolded code.
+            // Original scaffolded code.
             $scope.global = Global;
             $scope.package = {
                 name: 'theme'
