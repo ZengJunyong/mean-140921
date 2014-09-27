@@ -1,7 +1,7 @@
 mongoose = require 'mongoose'
 
 mongoose.set 'debug', true # change to false if don't want log on console
-mongoose.connect 'mongodb://192.168.2.105/mean-dev', {}, (err)->
+mongoose.connect 'mongodb://192.168.1.104/mean-dev', {}, (err)->
   if err
     console.error 'Error:', err.message
     return console.error '**Could not connect to MongoDB. Please ensure mongod is running and restart MEAN app.**'
@@ -31,4 +31,4 @@ mongoose.connect 'mongodb://192.168.2.105/mean-dev', {}, (err)->
 
             console.log 400, modelErrors
       return
-    console.log 200, 'save user and login successfully'
+    console.log 200, 'save user and login successfully' # TODO: why there is a field called __v?
