@@ -1,5 +1,7 @@
 ## visit mongodb
    mongo 192.168.2.105
+   
+## The config file path for mongodb maybe at /usr/local/etc/mongod.conf, try it!    
 
 # [![MEAN Logo](http://www.mean.io/img/logos/meanlogo.png)](http://mean.io/) MEAN Stack
 
