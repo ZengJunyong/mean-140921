@@ -3,6 +3,8 @@
    
 ## The config file path for mongodb maybe at /usr/local/etc/mongod.conf, try it!    
 
+## meanio/lib/aggregation.js line 112, add this line of code: this.debug = true;   
+
 # [![MEAN Logo](http://www.mean.io/img/logos/meanlogo.png)](http://mean.io/) MEAN Stack
 
 [![Build Status](https://travis-ci.org/linnovate/mean.svg?branch=master)](https://travis-ci.org/linnovate/mean)
