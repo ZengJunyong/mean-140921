@@ -5,7 +5,7 @@ mongoose = require('mongoose');
 
 mongoose.set('debug', true);
 
-mongoose.connect('mongodb://192.168.1.104/mean-dev', {}, function(err) {
+mongoose.connect('mongodb://localhost/mean-dev', {}, function(err) {
   var User, user;
   if (err) {
     console.error('Error:', err.message);

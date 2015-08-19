@@ -2,6 +2,9 @@
 
 angular.module('mean.system').controller('IndexController', ['$scope', 'Global', '$resource',
     function ($scope, Global, $resource) {
+
+        console.log('IndexController');
+
         $scope.global = Global;
         $scope.IndexController = true;
 

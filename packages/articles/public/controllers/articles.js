@@ -2,6 +2,9 @@
 
 angular.module('mean.articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Global', 'Articles',
   function($scope, $stateParams, $location, Global, Articles) {
+
+    console.log('ArticlesController');
+
     $scope.global = Global;
 
     $scope.hasAuthorization = function(article) {
